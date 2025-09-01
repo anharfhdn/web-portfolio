@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useMemo } from "react";
+import React, { useRef, useMemo, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 
@@ -34,7 +34,6 @@ const StarBackground = (props: any) => {
     if (!ref.current) return;
     ref.current.rotation.x += delta / 8;
     ref.current.rotation.y += delta / 12;
-    //ref.current.material.opacity = 0.6 + Math.sin(state.clock.elapsedTime * 2) * 0.4;
     ref.current.material.opacity = 0.3;
   })
 
@@ -53,13 +52,24 @@ const StarBackground = (props: any) => {
   );
 };
 
-const StarsCanvas: React.FC = () => (
-  <div className="w-full h-auto fixed inset-0 z-[1]">
-    <Canvas camera={{ position: [0, 0, 1] }}>
-      <StarBackground />
-    </Canvas>
-  </div>
-);
+const StarsCanvas: React.FC = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return <div className="w-full h-auto fixed inset-0 z-[1] bg-[#111]" />;
+  }
+
+  return (
+    <div className="w-full h-auto fixed inset-0 z-[1]">
+      <Canvas camera={{ position: [0, 0, 1] }}>
+        <StarBackground />
+      </Canvas>
+    </div>
+  );
+};
 
 export default StarsCanvas;
-
