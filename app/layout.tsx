@@ -3,32 +3,27 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import StarsCanvas from "@/components/main/StarsBackground";
 import Navbar from "@/components/Navbar";
+//import StarsCanvas from "@/components/main/StarsBackground";
+import StarsLoader from "@/components/StarsLoader";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ibiimemon.com/"),
+  metadataBase: new URL("https://yourdomain.com/"),
   title: "Anhar Fahrudin - Software Programmer | Full-Stack Dev | Embedded System | Ubuntu User - Developer Portfolio",
-  description:
-    "Developer Portfolio of Frontend & Mobile App Developer from Pakistan with 3+ years of expertise. Senior Software Engineer. Specializing mobile apps, UX, and JavaScript technologies.",
-  keywords: [
-    "Developer",
-    "Portfolio",
-    "Next.js",
-    "React.js",
-  ],
+  description: "Developer Portfolio with expertise in Full-Stack Development and Embedded Systems.",
+  keywords: ["Developer", "Portfolio", "Next.js", "React.js"],
   openGraph: {
     title: "Anhar Fahrudin - Software Programmer | Full-Stack Dev | Embedded System | Ubuntu User",
-    description:
-      "Frontend & Mobile App Developer from Pakistan with 3+ years of expertise. Senior Software Engineer. Specializing mobile apps, UX, and JavaScript technologies.",
+    description: "Full-Stack Developer with expertise in web technologies and embedded systems.",
     images: "/OpenGraph.jpg",
   },
   alternates: {
-    canonical: "https://ibiimemon.com/",
+    canonical: "https://yourdomain.com/",
   },
 };
+
 export default function RootLayout({
   children,
 }: {
@@ -45,27 +40,12 @@ export default function RootLayout({
               "@type": "Person",
               name: "Anhar Fahrudin",
               jobTitle: "Software Engineer",
-              url: "https://ibiimemon.com",
+              url: "https://yourdomain.com",
               sameAs: [
-                "https://www.linkedin.com/in/ibrahimmemonn/",
-                "https://github.com/ibrahimmemonn",
+                "https://www.linkedin.com/in/yourprofile/",
+                "https://github.com/yourusername",
               ],
             }),
-          }}
-        />
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.NEXT_PRIVATE_GTID}`}
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'G-${process.env.NEXT_PRIVATE_GTID}');
-            `,
           }}
         />
       </head>
@@ -74,7 +54,7 @@ export default function RootLayout({
       >
         <SpeedInsights />
         <Analytics />
-        <StarsCanvas />
+        <StarsLoader />
         <Navbar />
         {children}
       </body>
