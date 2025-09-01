@@ -70,7 +70,7 @@ const TechStack: React.FC<{}> = () => {
         TECH STACKS
       </h2>
       <p className=" tracking-[0.5em] text-center text-transparent font-light pb-5  bg-clip-text bg-gradient-to-r from-purple-700 to-orange-500  text-1xl ">
-        TECHNOLOGIES I'VE EXPERIENCED WITH
+        TECHNOLOGIES I&apos;VE EXPERIENCED WITH
       </p>
         
       <div className=" container mx-auto 2xl  ">
