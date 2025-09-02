@@ -4,8 +4,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "@/components/Navbar";
-//import StarsCanvas from "@/components/main/StarsBackground";
-import StarsLoader from "@/components/StarsLoader";
+import StarsCanvas from "@/components/main/StarsBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -54,7 +53,7 @@ export default function RootLayout({
       >
         <SpeedInsights />
         <Analytics />
-        <StarsLoader />
+        <StarsCanvas />
         <Navbar />
         {children}
       </body>
