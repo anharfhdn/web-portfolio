@@ -24,7 +24,7 @@ const Projects: React.FC<{}> = () => {
                 src="/certificate/golang-certificate.jpg"
                 height={150}
                 width={150}
-                alt="Ibrahim Memon - UX Design Project"
+                alt="Anhar Fahrudin - Go Certificate"
               />
               <div className="p-3">
                 <p className="text-white font-semibold text-xl">Go</p>
@@ -45,7 +45,7 @@ const Projects: React.FC<{}> = () => {
                 src="/certificate/rust-certificate.jpg"
                 height={150}
                 width={150}
-                alt="Ibrahim Memon - UX Design Project"
+                alt="Anhar Fahrudin - Rust Certificate"
               />
               <div className="p-3">
                 <p className="text-white font-semibold text-xl">Rust</p>
@@ -68,7 +68,7 @@ const Projects: React.FC<{}> = () => {
                 src="/certificate/dart-certificate.jpg"
                 height={150}
                 width={150}
-                alt="Ibrahim Memon - UX Design Project"
+                alt="Anhar Fahrudin - Dart Certificate"
               />
               <div className=" p-3 ">
                 <p className="text-white font-semibold text-xl">

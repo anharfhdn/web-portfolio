@@ -13,7 +13,7 @@ const Banner: React.FC<{}> = () => {
             src="/Me.png"
             height={250}
             width={250}
-            alt="Ibrahim Memon"
+            alt="Anhar Fahrudin"
           />
         </div>
 

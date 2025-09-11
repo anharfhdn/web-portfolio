@@ -13,11 +13,6 @@ export const metadata: Metadata = {
   title: "Anhar Fahrudin - Software Programmer | Full-Stack Dev | Embedded System | Ubuntu User - Developer Portfolio",
   description: "Developer Portfolio with expertise in Full-Stack Development and Embedded Systems.",
   keywords: ["Developer", "Portfolio", "Next.js", "React.js"],
-  openGraph: {
-    title: "Anhar Fahrudin - Software Programmer | Full-Stack Dev | Embedded System | Ubuntu User",
-    description: "Full-Stack Developer with expertise in web technologies and embedded systems.",
-    images: "/OpenGraph.jpg",
-  },
   alternates: {
     canonical: "https://yourdomain.com/",
   },
@@ -41,8 +36,8 @@ export default function RootLayout({
               jobTitle: "Software Engineer",
               url: "https://yourdomain.com",
               sameAs: [
-                "https://www.linkedin.com/in/yourprofile/",
-                "https://github.com/yourusername",
+                "https://www.linkedin.com/in/anhar-fahrudin/",
+                "https://github.com/anharfhdn",
               ],
             }),
           }}

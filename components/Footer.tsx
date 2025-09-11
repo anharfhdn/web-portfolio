@@ -7,7 +7,6 @@ import Link from "next/link";
 const Footer: React.FC<{}> = () => {
   const currentYear = new Date().getFullYear();
 
-  // Array for running text items
   const runningTextItems = [
     "✨ Full Stack Developer ✨",
     "✨ Open to Opportunities ✨",
@@ -20,7 +19,6 @@ const Footer: React.FC<{}> = () => {
 
   return (
     <footer className="w-full bg-black pt-8 pb-8">
-      {/* Running Text Section */}
       <div className="w-full overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-purple-900 py-3 mb-6">
         <div className="animate-marquee whitespace-nowrap">
           {runningTextItems.map((item, index) => (
@@ -33,7 +31,6 @@ const Footer: React.FC<{}> = () => {
               {item}
             </span>
           ))}
-          {/* Duplicate for seamless looping */}
           {runningTextItems.map((item, index) => (
             <span 
               key={`duplicate-${index}`}
@@ -86,7 +83,6 @@ const Footer: React.FC<{}> = () => {
           </p>
         </div>
 
-      {/* Improved CSS for seamless marquee animation */}
       <style jsx>{`
         @keyframes marquee {
           0% { transform: translateX(0); }
